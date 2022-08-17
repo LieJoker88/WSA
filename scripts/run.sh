@@ -388,7 +388,7 @@ sudo umount $MOUNT_DIR
 echo "Shrink images"
 e2fsck -yf ../_WORK_DIR_/wsa/"$ARCH"/system.img
 resize2fs -M ../_WORK_DIR_/wsa/"$ARCH"/system.img
-e2fsck -yf ../_WORK_DIR_/wsa/"$ARCH"/vendor.img
+force resize2fs ../_WORK_DIR/wsa/"$ARCH"/vendor.img
 e2fsck -yf ../_WORK_DIR_/wsa/"$ARCH"/product.img
 resize2fs -M ../_WORK_DIR_/wsa/"$ARCH"/product.img
 e2fsck -yf ../_WORK_DIR_/wsa/"$ARCH"/system_ext.img
