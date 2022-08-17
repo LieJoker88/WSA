@@ -176,7 +176,7 @@ fi
 resize2fs ../_WORK_DIR_/wsa/"$ARCH"/system.img "$SYSTEM_SIZE"s
 
 e2fsck -yf ../_WORK_DIR_/wsa/"$ARCH"/vendor.img
-VENDOR_SIZE=$(($(du -sB512 ../_WORK_DIR_/wsa/"$ARCH"/vendor.img | cut -f1) + 20000))
+VENDOR_SIZE=$(($(du -sB800 ../_WORK_DIR_/wsa/"$ARCH"/vendor.img | cut -f1) + 19000))
 resize2fs ../_WORK_DIR_/wsa/"$ARCH"/vendor.img "$VENDOR_SIZE"s
 
 echo "Mount images"
